@@ -42,8 +42,11 @@ public class Main {
             n++;
         }
 
-        // 1 задание
+        // 1 задание стандартная сортировка
         Arrays.sort(notebooks);
+        Arrays.stream(notebooks).forEach(System.out::println);
+        // 1 задание, например, сортировка расческой
+        CombSort.sort(notebooks);
         Arrays.stream(notebooks).forEach(System.out::println);
 
         // 2 задание
