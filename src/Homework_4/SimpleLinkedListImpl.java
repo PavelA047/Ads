@@ -113,11 +113,11 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E>, Iterable<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return new ListIterator<>();
+        return new ListIterator();
     }
 
-    private class ListIterator<E> implements Iterator<E> {
-        Node<E> current = (Node<E>) first;
+    private class ListIterator implements Iterator<E> {
+        Node<E> current = first;
         Node<E> prev = new Node<>(null, current);
         E returnItem;
 
@@ -137,11 +137,6 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E>, Iterable<E> {
                 return returnItem;
             }
             return null;
-
-        }
-
-        public void reset() {
-            current = (Node<E>) first;
         }
     }
 }
