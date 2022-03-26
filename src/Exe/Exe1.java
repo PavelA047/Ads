@@ -7,7 +7,7 @@ public class Exe1 {
     }
 
     private static long findSimpleDivider(long number) {
-        for (int i = 2; i < number; ) {
+        for (int i = 2; i < Math.sqrt(number) + 1; ) {
             if (number % i == 0) {
                 number /= i;
             } else i++;
